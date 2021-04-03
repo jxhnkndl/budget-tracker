@@ -1,16 +1,24 @@
 // Init local database variable
 let db;
 
-// Request new database instance for budget transactions
-const request = indexedDB.open("budget", 1);
+// Request new db instance for budget transactions
+const request = indexedDB.open('budget', 1);
 
 // Create pending transactions store
 request.onupgradeneeded = (e) => {
+  // Capture db instance returned by API
   const db = e.target.result;
-  const store = db.createObjectStore("pending", { autoIncrement: true });
-} 
+  const store = db.createObjectStore('pending', { autoIncrement: true });
+};
 
+// On successful database instantiation:
 request.onsuccess = (e) => {
+  // Capture db instance returned by API
   db = e.target.result;
-  console.log(db);
-}
+
+  // If the browser has network connectivity, check real db
+  if (navigator.onLine) {
+    checkDatabase();
+  }
+};
+
