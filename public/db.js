@@ -22,3 +22,7 @@ request.onsuccess = (e) => {
   }
 };
 
+// If there's an error creating the indexeddb
+request.onerror = (e) => {
+  console.log(`Something went wrong! ${e.target.errorCode}`);
+}
