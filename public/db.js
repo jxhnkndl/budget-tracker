@@ -26,3 +26,15 @@ request.onsuccess = (e) => {
 request.onerror = (e) => {
   console.log(`Something went wrong! ${e.target.errorCode}`);
 }
+
+// Save record to local browser db if network goes down
+function saveRecord(record) {
+  // Open new transaction with db
+  const transaction = db.transaction(["pending"], "readwrite");
+
+  // Access pending transaction store in local db
+  const store = transaction.objectStore("pending");
+
+  // Add the record to the pending transaction store
+  store.add(record);
+}
