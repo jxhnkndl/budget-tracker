@@ -1,8 +1,8 @@
 // Import modules
-const express = require("express");
-const logger = require("morgan");
-const mongoose = require("mongoose");
-const compression = require("compression");
+const express = require('express');
+const logger = require('morgan');
+const mongoose = require('mongoose');
+const compression = require('compression');
 
 // Config PORT
 const PORT = 3000;
@@ -11,22 +11,22 @@ const PORT = 3000;
 const app = express();
 
 // Install middleware
-app.use(logger("dev"));
+app.use(logger('dev'));
 app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Serve assets in public directory statically
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 // Establish database connection
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.connect('mongodb://localhost/budget', {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
 });
 
 // Import API routes
-app.use(require("./routes/api.js"));
+app.use(require('./routes/api.js'));
 
 // Start listening
 app.listen(PORT, () => {
