@@ -25,8 +25,9 @@ mongoose.connect('mongodb://localhost/budget', {
   useFindAndModify: false,
 });
 
-// Import API routes
+// Import API and HTML routes
 app.use(require('./routes/api.js'));
+app.use(require('./routes/html.js'));
 
 // Start listening
 app.listen(PORT, () => {
