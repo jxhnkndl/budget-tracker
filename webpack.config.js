@@ -4,12 +4,15 @@ const path = require('path');
 
 // Configure Webpack
 const config = {
+  // Basic Webpack properties
   entry: './public/index.js',
   output: {
     path: __dirname + '/public/dist',
     filename: 'bundle.js',
   },
   mode: 'development',
+
+  // Configure the PWA Manifest module
   plugins: [
     new WebpackPwaManifest({
       name: 'Budget Tracker',
@@ -29,6 +32,22 @@ const config = {
       ],
     }),
   ],
+
+  // Configure Webpack to use babel-loader to transpile and bundle the code
+  module: {
+    rules: [
+      {
+        test: /\.js$/, 
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
+  },
 };
 
 // Export configuration
