@@ -5,7 +5,7 @@ const path = require('path');
 // Configure Webpack
 const config = {
   // Basic Webpack properties
-  entry: './public/index.js',
+  entry: './public/src/index.js',
   output: {
     path: __dirname + '/public/dist',
     filename: 'bundle.js',
@@ -15,6 +15,8 @@ const config = {
   // Configure the PWA Manifest module
   plugins: [
     new WebpackPwaManifest({
+      fingerprints: false,
+      inject: false,
       name: 'Budget Tracker',
       short_name: 'Budget Tracker',
       description:
@@ -37,7 +39,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.js$/, 
+        test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
