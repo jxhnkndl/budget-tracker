@@ -10,7 +10,7 @@ const config = {
     path: __dirname + '/public/dist',
     filename: 'bundle.js',
   },
-  mode: 'development',
+  mode: 'production',
 
   // Configure the PWA Manifest module
   plugins: [
