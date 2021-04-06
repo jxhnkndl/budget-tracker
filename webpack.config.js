@@ -17,6 +17,7 @@ const config = {
     new WebpackPwaManifest({
       fingerprints: false,
       inject: false,
+      filename: 'manifest.json',
       name: 'Budget Tracker',
       short_name: 'Budget Tracker',
       description:
@@ -25,12 +26,12 @@ const config = {
       background_color: '#ffffff',
       theme_color: '#317EFB',
       'theme-color': '#317EFB',
+      display: 'standalone',
       icons: [
         {
-          src: path.resolve('public/icons/icon-512x512.png'),
-          sizes: [192, 512],
-          destination: path.join('icons')
-        },
+          src: path.resolve(__dirname, 'public/icons/icon-512x512.png'),
+          sizes: [192, 512]
+        }
       ],
     }),
   ],
