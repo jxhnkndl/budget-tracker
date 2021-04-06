@@ -118,7 +118,9 @@ npm run watch
 
 - Navigate to the [live application](https://peaceful-harbor-40706.herokuapp.com/) using your device
 - Find the `Install` button in the top right corner of the URL bar:  
-  <img src="assets/screenshots/budget-01.jpeg" alt="Chrome URL bar with install icon" width="400">
+
+  <img src="assets/screenshots/budget-01.jpeg" alt="Chrome URL bar with install icon" width="400">  
+
 - Follow the prompts to complete installation
 
 ## Install on Android (Chrome)
@@ -135,18 +137,26 @@ npm run watch
 
 - Navigate to the [live application](https://peaceful-harbor-40706.herokuapp.com/) using your device
 - Tap the `Share` button:  
-  <img src="assets/screenshots/budget-02.jpeg" alt="iOS share menu" width="400">
+
+  <img src="assets/screenshots/budget-02.jpeg" alt="iOS share menu" width="400">  
+
 - Tap the `Add to Home Screen` button:  
-  <img src="assets/screenshots/budget-03.jpeg" alt="iOS Add to Home Screen button" width="400">
+
+  <img src="assets/screenshots/budget-03.jpeg" alt="iOS Add to Home Screen button" width="400">  
+
 - Review the details and tap the `Add` button:  
-  <img src="assets/screenshots/budget-04.jpeg" alt="iOS Add Button" width="400">
+
+  <img src="assets/screenshots/budget-04.jpeg" alt="iOS Add Button" width="400">  
+
 - The application can now be used outside of the browser as if it were a native iOS application:  
-  <img src="assets/screenshots/budget-05.jpeg" alt="Budget Tracker application operating outside the browser" width="400">
+
+  <img src="assets/screenshots/budget-05.jpeg" alt="Budget Tracker application operating outside the browser" width="400">  
 
 ## Application Interface
 
 The following screenshot shows the application's user interface in its only state:  
-<img src="assets/screenshots/budget-06.jpeg" alt="Budget Tracker user interface">
+
+<img src="assets/screenshots/budget-06.jpeg" alt="Budget Tracker user interface" width="1000">  
 
 
 ## License
